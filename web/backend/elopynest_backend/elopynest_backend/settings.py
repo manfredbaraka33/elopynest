@@ -118,15 +118,19 @@ WSGI_APPLICATION = 'elopynest_backend.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv("DB_NAME"),
+#         'USER': os.getenv("DB_USER"),
+#         'PASSWORD': os.getenv("DB_PASSWORD"),
+#         'HOST': dj_database_url.parse(os.getenv("DB_URL")),
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PASSWORD"),
-        'HOST': dj_database_url.parse(os.getenv("DB_URL")),
-        'PORT': '5432',
-    }
+    "default": dj_database_url.parse(os.getenv("DB_URL"))
 }
 
 
