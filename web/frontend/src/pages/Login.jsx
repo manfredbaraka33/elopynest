@@ -13,7 +13,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://elopynest.vercel.app/api/token/", {
+      const res = await fetch("https://elopynest.onrender.com/api/token/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
