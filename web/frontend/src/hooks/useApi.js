@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useRef } from 'react';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: 'https://elopynest.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -69,7 +69,7 @@ export function useApi() {
           try {
             // Call your refresh endpoint with refresh token
             const response = await axios.post(
-              'http://127.0.0.1:8000/api/token/refresh/', // change to your refresh URL
+              'https://elopynest.onrender.com/api/token/refresh/', // change to your refresh URL
               { refresh: refreshToken },
               {
                 headers: {
