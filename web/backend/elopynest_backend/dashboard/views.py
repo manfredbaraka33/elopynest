@@ -755,62 +755,6 @@ def mark_selected_notifications_as_read(request):
 
 
 
-# @api_view(['GET'])
-# def general_leaderboard_view(request):
-#     """
-#     API endpoint for the general leaderboard based on total XP.
-#     """
-#     top_users = UserStats.objects.select_related('user').order_by(F('xp').desc())[:50]
-#     serializer = UserStatsSerializer(top_users, many=True)
-    
-#     current_user_rank = None
-#     if request.user.is_authenticated:
-#         try:
-#             # Re-fetch the current user's stats object to get the rank.
-#             current_user_stats = UserStats.objects.get(user=request.user)
-#             current_user_rank = UserStats.objects.filter(xp__gt=current_user_stats.xp).count() + 1
-#         except UserStats.DoesNotExist:
-#             pass
-            
-#     # The API now returns a list for the leaderboard, with a separate field for the user's rank.
-#     # The frontend must handle this object, not an array.
-#     response_data = {
-#         'leaderboard': serializer.data,
-#         'current_user_rank': current_user_rank
-#     }
-    
-#     return Response(response_data)
-
-# @api_view(['GET'])
-# def habit_list_view(request):
-#     """
-#     API endpoint to get a list of all unique habit titles with their IDs.
-#     """
-#     # Use .values() to return a list of dictionaries with 'id' and 'title'.
-#     habits = Habit.objects.all().values('id', 'title').distinct()
-#     return Response(list(habits))
-
-# @api_view(['GET'])
-# def habit_leaderboard_view(request, habit_id):
-#     """
-#     API endpoint for the habit-specific leaderboard based on streaks for a given habit ID.
-#     """
-#     try:
-#         # Get the habit to filter on its title, which is more scalable.
-#         habit = Habit.objects.get(id=habit_id)
-#     except Habit.DoesNotExist:
-#         return Response({"error": "Habit not found."}, status=404)
-
-#     # Filter all habits by the same title across all users and order by streak.
-#     leaderboard_data = Habit.objects.filter(title=habit.title) \
-#         .select_related('user') \
-#         .order_by(F('streak').desc())[:50]
-        
-#     serializer = HabitSerializer(leaderboard_data, many=True)
-    
-#     return Response(serializer.data)
-
-
 
 @api_view(['GET'])
 def general_leaderboard_view(request):
