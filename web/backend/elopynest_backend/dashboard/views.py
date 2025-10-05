@@ -668,7 +668,12 @@ def save_device_token(request):
     if not token:
         return Response({"error": "Token is required."}, status=status.HTTP_400_BAD_REQUEST)
 
-    DeviceToken.objects.update_or_create(user=request.user, defaults={"token": token})
+    # DeviceToken.objects.update_or_create(user=request.user, defaults={"token": token})
+    DeviceToken.objects.update_or_create(
+                                token=token,
+                                defaults={"user": request.user}
+                            )
+
     return Response({"message": "Device token saved successfully."})
 
 
