@@ -1,0 +1,17 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCPVQur0qA3bbizfOnuUM78b4YLjZtOg4E",
+  authDomain: "elopynest-test.firebaseapp.com",
+  projectId: "elopynest-test",
+  storageBucket: "elopynest-test.firebasestorage.app",
+  messagingSenderId: "655769127896",
+  appId: "1:655769127896:web:6f6c6fcdd39b35f4a8c0ad"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);

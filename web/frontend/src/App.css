@@ -1,0 +1,23 @@
+.jmodal{
+    min-height: 400px;
+    background-color: blue;
+    border: 3px solid black;
+}
+
+.react-calendar-heatmap text.react-calendar-heatmap-weekday {
+  font-weight: 600;
+  fill: #4B5563; /* Tailwind gray-600 */
+  font-size: 12px;
+}
+
+.ycontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.ycontainer {
+  scrollbar-width: none;
+}
+
+.ycontainer {
+  -ms-overflow-style: none;
+}

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.ycontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.ycontainer {
+  scrollbar-width: none;
+}
+
+.ycontainer {
+  -ms-overflow-style: none;
+}
+
+.ycontainer{
+    overflow-x: auto;
+    flex-direction: row;
+}

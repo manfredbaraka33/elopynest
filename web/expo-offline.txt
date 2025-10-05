@@ -1,0 +1,27 @@
+Developing an Expo Go app offline using USB debugging is a reliable method that's similar to traditional Android development. 
+This approach allows your phone to connect directly to your computer's local server, bypassing the need for an internet connection for code transfer.
+
+### Setting Up USB Debugging for Expo Go
+1.  **Enable Developer Mode on your Android Phone:**
+    * Go to **Settings > About phone**.
+    * Tap the **Build number** seven times. A message will appear saying, "You are now a developer!".
+2.  **Enable USB Debugging:**
+    * Go back to **Settings**, and you'll find a new **Developer options** menu.
+    * In the Developer options menu, turn on **USB debugging**.
+3.  **Connect your phone to your computer** with a USB cable.
+    * When you plug it in, your phone will likely ask, "**Allow USB debugging?**".
+    * Select **Always allow from this computer** and tap **OK**. This prevents the prompt from appearing every time you connect.
+4.  **Run your Expo app:**
+    * Open your project folder in your terminal.
+    * Run the command `npx expo start --localhost`.
+    * This starts the development server, but instead of using a public URL or a local IP that needs a network connection, it's only accessible on your computer's localhost.
+5.  **View on your device:**
+    * In the terminal, you'll see a menu with options to run the app. Press the **'a'** key to open the app on your Android device.
+    * Expo Go will automatically detect the connection and load the app from your computer's local server via the USB cable.
+
+---
+
+### How it Works
+When you run `npx expo start --localhost`, the Expo development server is configured to be accessed only from the local machine.
+ By enabling USB debugging and connecting your phone, you create a direct tunnel.  This allows your phone to access services running on your computer as if they were on the same network. 
+This means that all the code updates, console logs, and hot reloading features work seamlessly over the USB cable, making it a robust and dependable method for offline development.

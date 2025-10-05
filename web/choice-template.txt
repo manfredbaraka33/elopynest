@@ -1,0 +1,75 @@
+Absolutely! Here's a **clear decision guide** for when you’re creating a new React Native app with Expo, comparing the **JavaScript vs TypeScript** and **blank vs default templates** choices:
+
+---
+
+# **React Native / Expo Project Creation Decision Guide**
+
+## **1️⃣ Choosing a Template**
+
+When running:
+
+```bash
+npx create-expo-app my-app
+```
+
+or
+
+```bash
+npx create-expo-app@latest my-app --template <template-name>
+```
+
+You decide the **starting template**.
+
+| Template                   | What you get                                               | When to choose                                                                  |
+| -------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **blank**                  | Minimal project with `app/index.js` (or `index.tsx` if TS) | Best for learning, small projects, or full control of your code                 |
+| **blank (TypeScript)**     | Minimal project with TypeScript (`.tsx`) ready             | Use if you want to learn TS or for long-term maintainable code                  |
+| **tabs / default starter** | Prebuilt navigation, sample components, screens            | Use if you want to explore Expo features quickly or need a ready-made structure |
+
+**Rule of thumb:**
+
+* Learning / mini projects → `blank`
+* Prototype / starter exploration → `tabs`
+
+---
+
+## **2️⃣ Choosing JS vs TS**
+
+| Choice                      | Pros                                                                     | Cons                                            | Best For                                                                                     |
+| --------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **JavaScript (.js / .jsx)** | Quick setup, forgiving, minimal typing                                   | No type checking, harder to maintain large apps | Learning fundamentals, small projects, fast prototyping                                      |
+| **TypeScript (.ts / .tsx)** | Static typing, catches errors early, better editor support, maintainable | Slightly more setup, need to learn types        | Team projects, medium to large apps, long-term maintenance, learning “professional” patterns |
+
+**Rule of thumb:**
+
+* Want **fast experimentation** → JS
+* Want **structured, safe, maintainable code** → TS
+
+---
+
+## **3️⃣ Quick decision tree**
+
+```text
+Do you want a minimal, clean project? → Yes → blank
+Do you want navigation, sample screens, or a “full starter”? → Yes → tabs
+
+Do you want to use TypeScript? → Yes → choose blank (TypeScript) template
+Do you just want plain JavaScript? → Yes → choose blank (JS)
+```
+
+---
+
+## **4️⃣ Recommended Setup for Learners / Mini Projects**
+
+* **Template:** `blank`
+* **Language:** JavaScript if just starting, TypeScript if ready for type safety
+* **Folder structure:** Minimal → only `app/index.js` or `app/index.tsx`, `assets/`, and `node_modules/`
+
+This keeps things simple, understandable, and easy to experiment with.
+
+---
+
+If you want, I can also make a **one-page visual diagram** showing **all the choices when creating a new Expo app**,
+ so you can just follow it without thinking. It’s very handy for mini-project planning.
+
+Do you want me to make that diagram?

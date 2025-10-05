@@ -1,0 +1,3 @@
+userID=655769127896
+web push certificate key = BFnOnquZbhSV-1tkz65F0TKi9Fc4YhChUMJaS7lwJh9bSudP45RfW5egAgIw8Rf71BlxAMYSw1EvX3UpuLhVKCM
+
