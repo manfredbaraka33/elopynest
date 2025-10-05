@@ -11,5 +11,7 @@ djangorestframework_simplejwt==5.5.1
 langchain==0.3.27
 langchain-groq==0.3.7
 dj-database-url==1.2.0
+gunicorn==22.2.0
+
 
 
