@@ -39,7 +39,7 @@ export const requestForToken = async () => {
 
       if (currentToken) {
         const res = await axios.post(
-          "https://elopynest.onrender.com/notifications/save-token/",
+          "https://elopynest.onrender.com/api/notifications/save-token/",
           { fcm_token: currentToken }, // match backend param
           {
             headers: {
